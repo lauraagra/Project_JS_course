@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!--DOM é a arvore de elementos-->  
+    </head>
+
+    <body>
+
+        <div id="app">
+
+        </div>
+        <ul></ul>
+
+        <script>
+
+            var names = ['Diego', 'Douglas', 'Laura'];
+
+            var namesElements = document.querySelector('ul');
+            
+            for (names of names){
+
+                var listNames = document.createElement('li');
+                namesElements.appendChild(listNames);
+                var listElement = document.createTextNode(names);
+                listNames.appendChild(listElement);
+            }
+
+        </script>
+        <!-- var names = ['Diego', 'Douglas', 'Laura'];
+
+            var namesElements = document.createElement('ul');
+            namesElements.setAttribute('class', 'list');
+            
+            for (names of names){
+
+                var listNames = document.createElement('li');
+                namesElements.appendChild(listNames);
+                var listElement = document.createTextNode(names);
+                listNames.appendChild(listElement);
+            }
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(namesElements);
+            containerElement.appendChild(listNames);    
+        
+                OUTRO JEITO -->
+    </body>
+</html>

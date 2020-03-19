@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!--DOM é a arvore de elementos-->  
+    </head>
+
+    <body>
+
+        <div id="app">
+            <button class="btn" onclick="rendBox()"> Adicionar quadrado</button>
+
+        </div>
+
+        <script>
+            var btnElement = document.querySelector('#app');
+            btnElement.appendChild(divElement);
+
+            function rendBox() {
+                var divElement = document.createElement('div');
+
+                divElement.style.width = 100;
+                divElement.style.height = 100; 
+                divElement.style.backgroundColor = '#f00';
+
+                    divElement.onmouseover = function() {
+                        divElement.style.backgroundColor = getRandomColor();
+                    }
+                btnElement.appendChild(divElement); // div dos quadrados só vai aparecer se o btn for pressionado
+            }
+
+            function getRandomColor(){
+                    var letters = "0123456789ABCDEF";
+                    var color = "#";
+                    for (var i = 0; i<6; i++) {
+                        color += letters[Math.floor(Math.random() * 16)];
+                    }
+                    return(color);
+            }
+            var newColor = getRandomColor(); // #E943f0
+
+        </script>
+    </body>
+</html>

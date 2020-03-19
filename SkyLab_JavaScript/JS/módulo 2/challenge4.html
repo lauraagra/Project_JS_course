@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!--DOM é a arvore de elementos-->  
+    </head>
+
+    <body>
+
+        <div id="app">
+            <input type="text" name="name">
+            <button onclick="adc()"> Adicionar nome </button>
+        </div>
+        <ul></ul>
+
+        <script>
+
+            var names = ['Diego', 'Douglas', 'Laura'];
+
+            var namesElements = document.querySelector('ul');
+            
+            for (names of names){
+
+                var listNames = document.createElement('li');
+                namesElements.appendChild(listNames);
+                var listElement = document.createTextNode(names);
+                listNames.appendChild(listElement);
+            }
+
+            var inputElement = document.querySelector('input[name=name');
+
+            function adc(){
+                namesElements.querySelector('ul');
+                var createLi = document.createElement('li');
+                namesElements.appendChild(createLi);
+                var adcName = inputElement.value; // pega valor da input
+                var creatName = document.createTextNode(adcName);
+                createLi.appendChild(creatName);
+                inputElement.value = "";
+            }
+
+        </script>
+    </body>
+</html>

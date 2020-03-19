@@ -1,0 +1,29 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+        <script>
+
+                var endereco = {
+                    rua: "Rua Campos do Jordão",
+                    numero: 241,
+                    bairro: "Polvilho",
+                    cidade: "Cajamar",
+                    uf: "SP"
+                }
+
+            function retornaEndereco() {
+                //console.log("O usuário mora em " + endereco.uf + ", no bairro " + endereco.bairro + ", na rua " + endereco.rua + " com o número " + endereco.numero);
+                console.log(`O usuário mora em ${endereco.numero}, no bairro ${endereco.bairro} - cidade ${endereco.cidade}, na rua ${endereco.rua} com o número ${endereco.numero}`);
+                // usando a virgula como concatenação, ela da espaço entre as arrays e variaveis
+                // usando o mais como concatenação, não há espaço
+            }
+
+            var resultado = retornaEndereco();
+
+        </script>
+    </body>
+</html>

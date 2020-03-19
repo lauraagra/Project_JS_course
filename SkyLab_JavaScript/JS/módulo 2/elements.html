@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!--DOM é a arvore de elementos-->  
+    </head>
+
+    <body>
+
+        <div id="app">
+            <input id="nome" />
+
+        </div>
+
+        <script>
+            var linkElement = document.createElement('a'); // puxa a tag a
+            linkElement.setAttribute('href', 'http://rocketseat.com.br');
+            linkElement.setAttribute('title', 'Site da Rockeatseat');
+
+            var textElement = document.createTextNode('Acessar site');
+            linkElement.appendChild(textElement); // textElement é um filho do linkElement
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+
+            var inputElement = document.querySelector('#nome');
+            containerElement.removeChild(inputElement); // removendo atraves do js
+
+        </script>
+    </body>
+</html>

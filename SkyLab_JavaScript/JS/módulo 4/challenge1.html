@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!--DOM é a arvore de elementos-->  
+    </head>
+
+    <body>
+
+        <script>
+
+            var idade = 20;
+            function checaIdade(resolve, reject) {
+
+                if (idade >= 18) {
+                    resolve(idade.responseText);
+                } else {
+                    reject('Menor que 18');
+                }
+            }
+
+            checaIdade(20)
+                .then(function(res){
+                    console.log ('Maior que 18');
+                })
+                .catch(function(rej){
+                    console.log('Menor que 18');
+                });
+        </script>
+    </body>
+</html>

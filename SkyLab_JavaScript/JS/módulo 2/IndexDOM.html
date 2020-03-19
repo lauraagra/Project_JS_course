@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!--DOM é a arvore de elementos-->  
+    </head>
+
+    <body>
+
+        <div id="app">  
+            <button onclick="mostraAlerta()"> Me pressione </button> <!-- Existem varias propriedades além do onclick, que exibe assim que clica no botão -->
+            <input onkeypress="mostraAlerta()"/>
+        </div>
+
+        <div id="app2">
+            <input type="text" name="nome" id="nome"/>
+            <button class="botao"> Adicionar </button>
+        </div>
+
+
+        <script>
+
+            function mostraAlerta() {
+                alert('Botão foi clicado');
+            }
+
+            //     var inputElement = document.getElementById('nome');  //buscar por id    
+
+            //     var inputElement = document.getElementsByTagName('input')[0]; //buscar por tag - usando [0] vetor quando tem varios
+
+            //     var inputElement = document.querySelector('div#app input'); // outra maneiro de buscar os elementos na DOM - percorre a DOM
+            //ou
+            //     var inputElement = document.querySelector('input[name=nome'); // querySelector passa UM unico elemento, para passar todos usar querySelectorAll
+
+
+            var inputElement = document.querySelector('input[name=nome');
+            var btnElement = document.querySelector('button.botao');
+
+            btnElement.onclick = function() {
+                var text = inputElement.value; // recuperar valor da input
+
+                alert(text); // exibe o que o usuario digitar no input
+            }
+
+            console.log(inputElement);
+        </script>
+
+    </body>
+</html>
